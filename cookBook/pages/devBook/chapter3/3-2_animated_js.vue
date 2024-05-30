@@ -1,11 +1,21 @@
 <!--설치:
   npm install velocity-animate
   npm install --save-dev @types/velocity-animate
+
+  자바스크립트 애니메이션의 가능한 후크
+  @before-enter : 엘리먼트가 삽입되기 전에 호출
+  @enter        : 엘리먼트가 삽입될 때 호출
+  @after-enter  : 엘리먼트가 삽입되고 애니메이션이 끝나면 호출
+  @enter-cancelled : 에니메이션이 진행 중이지만, 엘리먼트를 퇴출해야 할 때 호출. stop 같은 거다.
+  @before-leave : leave 함수가 트리거 되기 전에 호출
+  @leave        : 엘리먼트가 퇴출 할때 호출
+  @after-leave  : 엘리먼트가 페이지를 퇴출할 때 호출
+  @leave-cancelled : leave 호출이 끝나기 전에 엘리먼트를 삽입해야 하는 경우 호출. v-show 에서만 작동
 -->
 <template>
   <div>
     <button class="styled-button" @click="toggleTaxi">
-      {{ taxiCalled ? '보내기' : '부르기.' }}
+      {{ taxiCalled ? '보내기' : '부르기' }}
     </button>
     <transition
       @enter="enter"
@@ -14,6 +24,12 @@
     >
       <p v-if="taxiCalled">😎</p>
     </transition>
+
+    <button class="styled-button"
+      @click="taxiCalled=false"
+    >
+      Cancel
+    </button>
   </div>
 </template>
 
