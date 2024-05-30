@@ -91,8 +91,8 @@ export default {
           children: [
             { title: '3-1_animated_css', to: '/devBook/chapter3/3-1_animated_css'},
             { title: '3-2_animated_js', to: '/devBook/chapter3/3-2_animated_js'},
-            { title: '3-3_computted_sort', to: '/devBook/chapter3/3-3_computted_sort'},
-            { title: '3-4_accountingJs', to: '/devBook/chapter3/3-4_accountingJs'},
+            { title: '3-3_fadein', to: '/devBook/chapter3/3-3_fadein'},
+            { title: '3-4_transition_key', to: '/devBook/chapter3/3-4_transition_key'},
             { title: '3-5_moment', to: '/devBook/chapter3/3-5_moment'},
             { title: '3-6_cssChange', to: '/devBook/chapter3/3-6_cssChange'},
             { title: '3-7_transition_show', to: '/devBook/chapter3/3-7_transition_show'},
