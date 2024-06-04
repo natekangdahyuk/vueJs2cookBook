@@ -33,9 +33,6 @@ export default {
       showRecipe: false,
       showNews: false
     }
-  },
-  components: {
-    Puff: () => import('../../../components/Puff.vue')
   }
 }
 </script>
